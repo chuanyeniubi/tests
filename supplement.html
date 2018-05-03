@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>补投电子发票</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="css/weidx.css" />
+    </head>
+
+	<body>
+		<div class="page-group">
+			<div class="page page-current">
+				<div class="content">
+                
+					<!-- Slider -->
+					<!-- 申请信息 -->
+                    <div class="list-block no-m-p js-search-content">
+                        <ul>
+                          <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title label">发票类型</div>
+                                <div class="item-input item-select">
+                                  <select id="hideselect">
+                                    <option value="">月结发票（后付费号码）</option>
+                                    <option value="2">充值发票（预付费号码）</option>
+                                    <option value="3">一次性费用发票</option>
+                                  </select>
+                                </div>
+                            </div>
+                          </li>
+                          <li class="item-content item1">
+                            <div class="item-inner">
+                              <div class="item-title label">查询号码</div>
+                                <div class="item-input item-select">
+                                  <select>
+                                    <option>AN200404170469</option>
+                                    <option>ADSLD1343013</option>
+                                  </select>
+                                </div>
+                            </div>
+                          </li>
+                          <li class="item-content item2">
+                            <div class="item-inner">
+                              <div class="item-title label">查询时间</div>
+                                <div class="item-input item-select">
+                                   <!--<input type="text" class="input-date" value="2018-04-09" />-->
+                                   <select class="selsty" style="width:180px"  id="billMonthSel">
+
+                                   </select>
+                                </div>
+                            </div>
+                          </li>
+                          <li class="item-content item3" style="display:none;">
+                            <div class="item-inner">
+                              <div class="item-title label">开具发票时间</div>
+                                <div class="item-input">
+                                   <!--<input type="tel" id="" value="20180405" />-->
+                                   <div class="item-input item-select">
+                                   <input type="text" id="a" class="input-date" value="" readonly="" placeholder="请选择日期">
+                                </div>
+                                </div>
+                            </div>
+                          </li>
+                          <li class="item-content item4 no-border" style="display:none;">
+                            <div class="item-inner">
+                              <div class="item-title label">订单受理时间</div>
+                                <div class="item-input item-select">
+                                  <input type="text" class="input-date" value="" placeholder="请选择日期"/>
+                                </div>
+                                <div class="txt-999">至</div>
+                                <div class="item-input item-select">
+                                  <input type="text" class="input-date"  value=""  placeholder="请选择日期"/>
+                                </div>
+                            </div>
+                          </li>
+                          <li class="item-content item4" style="display:none;">
+                            <div class="item-inner">
+                              <div class="item-title label"></div>
+                              <div class="item-input p-l-025 txt-auxiliary txt-06">所选时间不能超过一周</div>
+                            </div>
+                          </li>
+                          <li class="item-content item5" style="display:none;">
+                            <div class="item-inner">
+                              <div class="item-title label">查询订单号</div>
+                                <div class="item-input">
+                                  <input type="tel" id="" value="" placeholder="请输入您的订单号" />
+                                </div>
+                            </div>
+                          </li>
+                        </ul>
+                    </div>
+                    <div class="content-block js-search-content">
+                       <a id="js-btn-search1" class="button button-fill">查询</a>
+                    </div>
+                    <div class="explain-bottom position-bot txt-theme txt-06 text-center js-search-content js-btn-promptUl">
+                       <div>业务说明</div>
+                    </div>
+					<!-- 申请信息结束 -->
+                    
+					<!-- 确认信息 -->
+                    <div class="list-block list-verification no-m-p js-search-result1" style="display:none;">
+                        <ul>
+                          <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title label">发票流水号</div>
+                              <div class="item-after p-l-025 txt-666">CBSP7550000003789260</div>
+                            </div>
+                          </li>
+                          <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title label">金额(分)</div>
+                              <div class="item-after p-l-025 txt-666">36366</div>
+                            </div>
+                          </li>
+                          <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title label">账期</div>
+                              <div class="item-after p-l-025 txt-666">201610</div>
+                            </div>
+                          </li>
+                          <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title label">发票类型</div>
+                              <div class="item-after p-l-025 txt-666">月结发票</div>
+                            </div>
+                          </li>
+                          <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title label">发票状态</div>
+                              <div class="item-after p-l-025 txt-666">正常</div>
+                            </div>
+                          </li>
+                          <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title label">发票状态</div>
+                              <div class="item-after p-l-025 txt-666">正常</div>
+                            </div>
+                          </li>
+                        </ul>
+                    </div>
+                    <div class="content-block buttons-row js-search-result1-btns" style="display:none;">
+                       <a id="js-btn-download" class="button button-fill txt-05">查看发票与下载</a>
+                       <a id="js-btn-push" class="button button-fill txt-05">重新推送到邮箱/手机</a>
+                       <a id="js-btn-qrcode" class="button button-fill txt-05">扫描二维码下载到手机</a>
+                    </div>
+					<!-- 确认信息结束 -->
+                     
+                    <!-- 提交结果 -->
+					<div class="content-block js-search-result2" style="display:none;">
+                       <div class="result-inner">
+                          <div class="result-icon"><span class="iconfont icon-sad txt-red"></span></div>
+                          <div class="result-title txt-red">很抱歉，操作失败！</div>
+                          <div class="result-text">该业务需要预付费话费、预付费小灵通、预付费手机、预付费宽带或预付费ADSL(IPTV)才能办理，您登录信息中不含符合办理该业务。</div>
+                       </div>
+					</div>
+                    <div class="content-block buttons-row js-search-result2" style="display:none;">
+                       <a class="button button-fill js-btn-return">返回</a>
+                    </div>
+					<!-- 提交结果结束 -->
+			    </div>
+		    </div>
+        </div>
+        
+        
+        <!-- 弹出窗背景 -->
+        <div class="modal-overlay"></div>
+        
+		<!-- 温馨提示弹出窗 -->
+        <div class="modal js-modal-promptUl">
+           <div class="modal-block">
+               <div class="modal-inner">
+                   <div class="modal-title">业务说明</div>
+                   <div class="modal-text">
+                      <ul>
+                        <li>功能说明：预付费号码在1小时内有充值成功，并未开具发票记录，可进行补开。</li>
+                        <li>温馨提示：<br><strong>①</strong>若后付费号码已经开具过纸质月结发票，将无法再开具电子发票。<br><strong>②</strong>因部分手机APP、浏览器pdf显示问题，扫描二维码查看发票无法显示销售方（红章）。建议使用UC手机浏览器或已安装pdf的手机/电脑查看。</li>
+                      </ul>
+                   </div>
+               </div>
+               <div class="modal-buttons">
+                  <a class="button button-fill js-modal-close">关闭</a>
+               </div>
+           </div>
+        </div>
+        <!-- 温馨提示弹出窗结束 -->
+        
+		<!-- 查看发票与下载弹出窗 -->
+        <div class="modal js-modal-download">
+           <div class="modal-block modal-block-wide">
+               <div class="modal-inner">
+                   <div class="modal-title text-left">当前浏览器不支持查看PDF，请下载后再查看：<a href="#" class="txt-theme link">下载</a></div>
+               </div>
+               <div class="modal-buttons">
+                  <a class="button button-fill js-modal-close">关闭</a>
+               </div>
+           </div>
+        </div>
+        <!-- 查看发票与下载弹出窗结束 -->
+		<!-- 重新推送到邮箱/手机弹出窗 -->
+        <div class="modal js-modal-push">
+           <div class="modal-block modal-block-wide js-push-content">
+               <div class="modal-inner">
+                   <div class="modal-title">您正在申请重新推送电子发票：</div>
+                   <div class="modal-input row no-gutter text-left txt-06">
+                      <div class="col-33">操作类型：</div>
+                      <div class="col-66">推送电子发票</div>
+                   </div>
+                   <div class="modal-input row no-gutter">
+                      <div class="col-33 text-left txt-06">推送到电子邮箱：</div>
+                      <div class="col-66"><input class="input" type="tel" placeholder="请输入邮箱地址，可修改" ></div>
+                   </div>
+                   <div class="modal-input row no-gutter">
+                      <div class="col-33 text-left txt-06">推送到天翼手机：</div>
+                      <div class="col-66"><input class="input" type="tel" placeholder="请输入11位电信手机号码，可修改" ></div>
+                   </div>
+               </div>
+               <div class="modal-buttons">
+                  <a class="button js-modal-close">返回</a>
+                  <a id="js-btn-PushAffirm" class="button button-fill">确认</a>
+               </div>
+           </div>
+           <div class="modal-block modal-block-wide js-push-result" style="display:none;">
+               <div class="modal-inner">
+                   <div class="modal-icon"><span class="iconfont icon-smile txt-14 txt-red"></span></div>
+                   <div class="modal-text">您已成功申请重新推送电子发票到电子邮箱/天翼手机，稍后请查收！</div>
+               </div>
+               <div class="modal-buttons">
+                  <a class="button button-fill js-modal-close">返回</a>
+               </div>
+           </div>
+        </div>
+        <!-- 重新推送到邮箱/手机弹出窗结束 -->
+		<!-- 扫描二维码下载到手机弹出窗 -->
+        <div class="modal js-modal-qrcode">
+           <div class="modal-block">
+               <div class="modal-inner">
+                   <div class="modal-qrcode"><img src="../img/qrcode.png"></div>
+                   <div class="modal-text">扫描二维码下载到手机</div>
+               </div>
+               <div class="modal-buttons">
+                  <a class="button button-fill js-modal-close">关闭</a>
+               </div>
+           </div>
+        </div>
+        <!-- 扫描二维码下载到手机弹出窗结束 -->
+        
+    
+    <script type='text/javascript' src='https://m.sz189.cn/weidx/js/zepto.min.js' charset='utf-8'></script>
+    <!--<script src="js/jquery-1.11.1.min.js"></script>-->
+    <script type='text/javascript' src='https://m.sz189.cn/weidx/js/sm.min.js' charset='utf-8'></script>
+	<script src="js/suplement.js" type="text/javascript" charset="utf-8"></script>
+    <!--stra 统计代码 --> 
+    <span style="display:none"> 
+    <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?f01493c9ebcbaa86b2615dbfdeb7e605";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script> 
+    </span> 
+    <!--End 统计代码 -->
+
+	</body>
+</html>
